@@ -1,0 +1,87 @@
+export const applianceData = {
+  bathroom: [
+    { name: "Bathroom heater - fan", power: 2400, cost: 61, unit: "hour" },
+    { name: "Bathroom heater - twin radiant lamps", power: 550, cost: 14, unit: "hour" },
+    { name: "Heated towel rail", power: 80, cost: 48, unit: "day" },
+    { name: "Extraction fan", power: 20, cost: 1, unit: "hour" },
+    { name: "Shower (10 minutes, 1-star shower head)", power: null, cost: 125, unit: "shower" },
+    { name: "Shower (10 minutes, 3-star shower head)", power: null, cost: 80, unit: "shower" },
+    { name: "Bath", power: null, cost: 100, unit: "bath" },
+    { name: "Hair dryer", power: 1600, cost: 40, unit: "hour" }
+  ],
+  heating: [
+    { name: "Heat pump - 4.5kW heating or cooling (low)", power: 1250, cost: 31, unit: "hour" },
+    { name: "Heat pump - 4.5kW heating or cooling (max)", power: 1800, cost: 45, unit: "hour" },
+    { name: "Plug-in heater - thermostat maintaining a temperature", power: 1100, cost: 27.5, unit: "hour" },
+    { name: "Plug-in heater - warming up a room", power: 2200, cost: 55, unit: "hour" },
+    { name: "Radiant heater (indoor, 3 bar)", power: 1200, cost: 30, unit: "hour" },
+    { name: "Wall panel heater (ceramic)", power: 500, cost: 13, unit: "hour" },
+    { name: "Dehumidifier (compressor)", power: 200, cost: 5, unit: "hour" },
+    { name: "Dehumidifier (dessicant)", power: 500, cost: 11, unit: "hour" },
+    { name: "Electric blanket", power: 100, cost: 3, unit: "hour" },
+    { name: "Cupboard heater", power: 100, cost: 60, unit: "day" },
+    { name: "Pedestal fan", power: 200, cost: 5, unit: "hour" }
+  ],
+  kitchen: [
+    { name: "Freezer - small (<200L)", power: null, cost: 15, unit: "day" },
+    { name: "Freezer - large (200-300L)", power: null, cost: 25, unit: "day" },
+    { name: "Fridge/freezer (small <375L)", power: null, cost: 82, unit: "day" },
+    { name: "Fridge/freezer (medium/large 375-450L)", power: null, cost: 96, unit: "day" },
+    { name: "Fridge/freezer (extra large >450L)", power: null, cost: 147, unit: "day" },
+    { name: "Hand washing dishes (15-litre sink filled twice)", power: null, cost: 30, unit: "sink" },
+    { name: "Dishwasher", power: null, cost: 25, unit: "load" },
+    { name: "Oven (roast)", power: null, cost: 100, unit: "roast" },
+    { name: "Oven (scones)", power: null, cost: 25, unit: "batch" },
+    { name: "Cooktop (per element) - small", power: 1200, cost: 30, unit: "hour" },
+    { name: "Cooktop (per element) - large", power: 2200, cost: 55, unit: "hour" },
+    { name: "Rangehood", power: 150, cost: 4, unit: "hour" },
+    { name: "Microwave", power: 1000, cost: 2, unit: "plate" },
+    { name: "Air fryer", power: 1750, cost: 12, unit: "30 minutes" },
+    { name: "Slow cooker", power: null, cost: 20, unit: "8 hours" },
+    { name: "Breadmaker", power: null, cost: 10, unit: "loaf" },
+    { name: "Benchtop mixer (max)", power: 800, cost: 20, unit: "hour" },
+    { name: "Food processor (max)", power: 1000, cost: 25, unit: "hour" },
+    { name: "Espresso machine", power: 1400, cost: 1, unit: "2 cups" },
+    { name: "Kettle", power: 2400, cost: 4, unit: "boil" },
+    { name: "Toaster", power: 1500, cost: 3, unit: "load" },
+    { name: "Sandwich press", power: 2000, cost: 8, unit: "load" }
+  ],
+  lighting: [
+    { name: "Incandescent bulb (60W)", power: 60, cost: 12, unit: "8 hours" },
+    { name: "Incandescent bulb (100W)", power: 100, cost: 20, unit: "8 hours" },
+    { name: "Compact fluorescent bulb (60W equivalent)", power: 15, cost: 3, unit: "8 hours" },
+    { name: "Compact fluorescent bulb (100W equivalent)", power: 20, cost: 4, unit: "8 hours" },
+    { name: "LED bulb (60W equivalent)", power: 9, cost: 2, unit: "8 hours" },
+    { name: "LED bulb (100W equivalent)", power: 14, cost: 3, unit: "8 hours" },
+    { name: "Halogen downlight (MR16 fitting)", power: 5, cost: 1, unit: "8 hours" },
+    { name: "Halogen downlight (GU10 fitting)", power: 50, cost: 10, unit: "8 hours" }
+  ],
+  laundry: [
+    { name: "Washing machine (front loader, cold wash)", power: null, cost: 6, unit: "load" },
+    { name: "Washing machine (front loader, warm wash)", power: null, cost: 19, unit: "load" },
+    { name: "Washing machine (top loader, cold wash)", power: null, cost: 5, unit: "load" },
+    { name: "Washing machine (top loader, warm wash)", power: null, cost: 31, unit: "load" },
+    { name: "Clothes dryer (3.5kg load, vented and condenser)", power: null, cost: 50, unit: "load" },
+    { name: "Clothes dryer (3.5kg load, heat pump)", power: null, cost: 25, unit: "load" },
+    { name: "Ironing", power: 2400, cost: 60, unit: "hour" },
+    { name: "Vacuum cleaner (corded)", power: 1500, cost: 38, unit: "hour" },
+    { name: "Stick vacuum (battery)", power: null, cost: 2, unit: "recharge" }
+  ],
+  entertainment: [
+    { name: "Television (40\" LED)", power: 50, cost: 1, unit: "hour" },
+    { name: "Television (70\" OLED)", power: 130, cost: 3, unit: "hour" },
+    { name: "Soundbar or home theatre", power: 20, cost: 1, unit: "hour" },
+    { name: "Computer and dual LCD monitors", power: 170, cost: 4, unit: "hour" },
+    { name: "Games console", power: 190, cost: 5, unit: "hour" }
+  ]
+};
+
+export const categories = [
+  { id: 'bathroom', name: 'Bathroom' },
+  { id: 'heating', name: 'Heating' },
+  { id: 'kitchen', name: 'Kitchen' },
+  { id: 'lighting', name: 'Lighting' },
+  { id: 'laundry', name: 'Laundry' },
+  { id: 'entertainment', name: 'Entertainment' }
+];
+
