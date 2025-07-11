@@ -24,6 +24,8 @@ import "./App.css";
 
 function MainApp() {
   const [electricityRate, setElectricityRate] = useState(0.25);
+  const [dailyFixedRate, setDailyFixedRate] = useState(1.0);
+  const [rateIncludesGST, setRateIncludesGST] = useState(false);
   const [theme, setTheme] = useState("light");
   const [usageData, setUsageData] = useState({});
 
@@ -79,7 +81,7 @@ function MainApp() {
                 <Zap className="h-8 w-8 text-white" />
               </div>
               <h1 className="text-2xl md:text-3xl font-bold text-white">
-                NZ Power Calculator
+                NZ Electricity Calculator
               </h1>
             </div>
 
@@ -87,10 +89,23 @@ function MainApp() {
               Calculate Your Power Costs
             </h2>
 
-            <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-4">
               Estimate your electricity usage and costs for New Zealand
               households
             </p>
+            <div className="text-center space-y-2">
+              <p className="text-sm text-white/80">
+                Data sourced from{" "}
+                <a
+                  href="https://www.consumer.org.nz/articles/appliance-running-costs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-white/80 underline transition-colors"
+                >
+                  Consumer NZ
+                </a>
+              </p>
+            </div>
           </div>
 
           {/* Quick Calculator */}
@@ -98,6 +113,10 @@ function MainApp() {
             <QuickCalculator
               electricityRate={electricityRate}
               onRateChange={setElectricityRate}
+              dailyFixedRate={dailyFixedRate}
+              onDailyFixedRateChange={setDailyFixedRate}
+              rateIncludesGST={rateIncludesGST}
+              onRateIncludesGSTChange={setRateIncludesGST}
             />
           </div>
         </div>
@@ -109,6 +128,8 @@ function MainApp() {
           <CostSummary
             appliances={applianceData}
             electricityRate={electricityRate}
+            dailyFixedRate={dailyFixedRate}
+            rateIncludesGST={rateIncludesGST}
             usageData={usageData}
           />
         </div>
@@ -171,6 +192,9 @@ function MainApp() {
               Consumer NZ
             </a>{" "}
             • Built for New Zealand households • Open source calculator
+          </p>
+          <p className="text-sm text-muted-foreground mt-2">
+            Another product made with ❤️ by Wei Hong
           </p>
         </div>
       </div>
