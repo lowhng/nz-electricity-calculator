@@ -113,3 +113,17 @@ dist
 # Vite build output
 dist
 dist-ssr
+
+# Tempo files
+**/tempobook/dynamic/
+**/tempobook/storyboards/
+
+# Package manager lock files (keep only pnpm-lock.yaml)
+package-lock.json
+yarn.lock
+
+# Additional build artifacts
+.pnpm-store/
+.vscode/
+.DS_Store
+Thumbs.db
