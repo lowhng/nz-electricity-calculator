@@ -111,7 +111,7 @@ export const applianceData = {
     { name: "Breadmaker", power: null, cost: 10, unit: "loaf" },
     { name: "Benchtop mixer (max)", power: 800, cost: 20, unit: "hour" },
     { name: "Food processor (max)", power: 1000, cost: 25, unit: "hour" },
-    { name: "Espresso machine", power: 1400, cost: 1, unit: "2 cups" },
+    { name: "Espresso machine", power: 1400, cost: 1, unit: "2 shots" },
     { name: "Kettle", power: 2400, cost: 4, unit: "boil" },
     { name: "Toaster", power: 1500, cost: 3, unit: "load" },
     { name: "Sandwich press", power: 2000, cost: 8, unit: "load" },

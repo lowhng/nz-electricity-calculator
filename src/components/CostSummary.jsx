@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card.jsx";
 import { Badge } from "@/components/ui/badge.jsx";
-import { TrendingUp, DollarSign, Zap } from "lucide-react";
+import { TrendingUp, DollarSign, Zap, CheckCircle } from "lucide-react";
 
 export function CostSummary({
   appliances,
@@ -108,13 +108,7 @@ export function CostSummary({
         <CardContent className="py-2 px-4 md:p-6 md:text-center">
           <div className="flex items-center gap-3 md:flex-col md:gap-0">
             <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-500 rounded-full flex items-center justify-center md:mx-auto md:mb-3 flex-shrink-0">
-              <svg
-                className="w-5 h-5 md:w-6 md:h-6 text-white"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M10.707 2.293a1 1 0 00-1.414 0l-9 9a1 1 0 001.414 1.414L2 12.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-4.586l.293.293a1 1 0 001.414-1.414l-9-9z" />
-              </svg>
+              <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-white" />
             </div>
             <div className="flex-1 md:flex-none">
               <div className="text-sm text-blue-600 dark:text-blue-400 mb-1">
