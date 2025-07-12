@@ -57,7 +57,7 @@ export function QuickCalculator({
               type="number"
               min="0"
               step="0.01"
-              value={(electricityRate * 100).toFixed(2)}
+              defaultValue={(electricityRate * 100).toFixed(2)}
               onChange={(e) => handleRateChange(e.target.value / 100)}
               className="bg-white/20 border-white/30 text-white placeholder:text-white/60 mt-1"
               placeholder="25.00"
@@ -73,7 +73,7 @@ export function QuickCalculator({
               type="number"
               min="0"
               step="0.1"
-              value={dailyFixedRate}
+              defaultValue={dailyFixedRate}
               onChange={(e) =>
                 onDailyFixedRateChange(parseFloat(e.target.value) || 0)
               }
@@ -93,7 +93,7 @@ export function QuickCalculator({
               type="number"
               min="0"
               step="10"
-              value={monthlyBudget}
+              defaultValue={monthlyBudget}
               onChange={(e) =>
                 setMonthlyBudget(parseFloat(e.target.value) || 0)
               }

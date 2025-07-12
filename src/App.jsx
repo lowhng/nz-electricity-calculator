@@ -16,7 +16,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card.jsx";
-import { Zap, Calculator, Info, Settings, Moon, Sun } from "lucide-react";
+import {
+  Zap,
+  Calculator,
+  Info,
+  Settings,
+  Moon,
+  Sun,
+  ArrowUp,
+  Heart,
+} from "lucide-react";
 import { Label } from "@/components/ui/label.jsx";
 import { Input } from "@/components/ui/input.jsx";
 import routes from "tempo-routes";
@@ -28,11 +37,28 @@ function MainApp() {
   const [rateIncludesGST, setRateIncludesGST] = useState(false);
   const [theme, setTheme] = useState("light");
   const [usageData, setUsageData] = useState({});
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     // Apply theme to document
     document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const handleUsageChange = (category, applianceIndex, value) => {
     setUsageData((prev) => ({
@@ -179,6 +205,41 @@ function MainApp() {
           />
         ))}
 
+        {/* Scroll to Top Button */}
+        {showScrollTop && (
+          <button
+            onClick={scrollToTop}
+            className="fixed bottom-6 right-6 z-50 p-3 bg-primary text-primary-foreground rounded-full shadow-lg hover:bg-primary/90 transition-all duration-200 hover:scale-110"
+            aria-label="Scroll to top"
+          >
+            <ArrowUp className="h-5 w-5" />
+          </button>
+        )}
+
+        {/* Scroll to Top Button (Desktop) */}
+        <div className="text-center mt-8 mb-2">
+          <button
+            onClick={scrollToTop}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-all duration-200 hover:scale-105 shadow-md mb-4"
+          >
+            <ArrowUp className="h-4 w-4" />
+            Back to Top
+          </button>
+        </div>
+
+        {/* Donation Button */}
+        <div className="text-center mb-6">
+          <a
+            href="https://ko-fi.com/weihongdev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full font-medium hover:from-pink-600 hover:to-rose-600 transition-all duration-200 hover:scale-105 shadow-lg"
+          >
+            <Heart className="h-4 w-4" />
+            Buy me a coffee
+          </a>
+        </div>
+
         {/* Footer */}
         <div className="text-center mt-12 pt-8 border-t">
           <p className="text-sm text-muted-foreground">
@@ -195,6 +256,15 @@ function MainApp() {
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             Another product made with ❤️ by Wei Hong
+          </p>
+          <p className="text-sm text-muted-foreground mt-2">
+            Got feedback? Contact me at{" "}
+            <a
+              href="mailto:weihong.work@outlook.com"
+              className="text-primary hover:underline transition-colors"
+            >
+              weihong.work@outlook.com
+            </a>
           </p>
         </div>
       </div>

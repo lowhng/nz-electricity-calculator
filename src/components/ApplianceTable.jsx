@@ -272,7 +272,7 @@ export function ApplianceTable({
                             max={getSliderProps(appliance).max}
                             min={getSliderProps(appliance).min}
                             step={getSliderProps(appliance).step}
-                            className="w-full"
+                            className="w-full [&_[role=slider]]:h-6 [&_[role=slider]]:w-6 [&_[role=slider]]:border-2 [&_[role=slider]]:border-primary [&_[role=slider]]:bg-background [&_[role=slider]]:shadow-lg"
                           />
                         </div>
                         <div className="flex items-center gap-1">
