@@ -280,7 +280,7 @@ export function ApplianceTable({
                             type="number"
                             min="0"
                             step="0.1"
-                            placeholder={appliance.unit === "day" ? "1" : "0"}
+                            placeholder="0"
                             className="w-12 text-center p-1 h-7"
                             style={{ fontSize: "16px" }}
                             value={usageData[index] || ""}
@@ -377,7 +377,7 @@ export function ApplianceTable({
                             type="number"
                             min="0"
                             step="0.1"
-                            placeholder={appliance.unit === "day" ? "1" : "0"}
+                            placeholder="0"
                             className="w-24 text-center"
                             style={{ fontSize: "16px" }}
                             value={usageData[index] || ""}
