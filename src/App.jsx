@@ -255,7 +255,7 @@ function MainApp() {
             • Built for New Zealand households • Open source calculator
           </p>
           <p className="text-sm text-muted-foreground mt-2">
-            Another product made with ❤️ by
+            Another product made with ❤️ by{" "}
             <a
               href="https://www.weihong.dev"
               target="_blank"
