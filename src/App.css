@@ -110,6 +110,36 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* Dark mode gradient overrides */
+.dark .from-blue-600 {
+  --tw-gradient-from: #1e3a8a !important;
+}
+
+.dark .via-purple-600 {
+  --tw-gradient-via: #7c3aed !important;
+}
+
+.dark .to-purple-700 {
+  --tw-gradient-to: #6d28d9 !important;
+}
+
+/* Dark mode Quick Calculator override */
+.dark .bg-white\/30 {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.dark .bg-white\/20 {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.dark .border-white\/30 {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark .border-white\/20 {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
