@@ -255,15 +255,23 @@ function MainApp() {
             • Built for New Zealand households • Open source calculator
           </p>
           <p className="text-sm text-muted-foreground mt-2">
-            Another product made with ❤️ by Wei Hong
+            Another product made with ❤️ by
+            <a
+              href="https://www.weihong.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline transition-colors"
+            >
+              Wei Hong
+            </a>
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             Got feedback? Contact me at{" "}
             <a
-              href="mailto:weihong.work@outlook.com"
+              href="mailto:hello@weihong.dev"
               className="text-primary hover:underline transition-colors"
             >
-              weihong.work@outlook.com
+              hello@weihong.dev
             </a>
           </p>
         </div>
